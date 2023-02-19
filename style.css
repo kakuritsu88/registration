@@ -12,7 +12,7 @@ height: -webkit-fill-available-
 }
 
 body{
-    display: flex;
+    display: absolute;
     align-items: center;
     min-height: 100vh;
     margin: 0 auto;

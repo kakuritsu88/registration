@@ -9,9 +9,11 @@ body{
     display: flex;
     align-items: center;
     min-height: 100vh;
+    margin: 0 auto;
     background:url(Gambar/invite.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    height: -webkit-fill-available-
 }
 
 .wrapper{

@@ -13,7 +13,7 @@ height: -webkit-fill-available-
 
 body{
     display: absolute;
-    align-items: center;
+    align-items: left;
     min-height: 100vh;
     margin: 0 auto;
     background:url(Gambar/invite.jpg) no-repeat;

@@ -168,13 +168,7 @@ select::-ms-expand {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
-/* Safari and Chrome */
-.myClass {
- color:red;
+    .main-content {
+        flex: 1;
+    }
 }
-
-/* Safari only override */
-::i-block-chrome,.myClass {
- color:blue;
-}
-

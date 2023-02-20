@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=0;" name="viewport">
+  <title>SIGN UP</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="sweetalert.min.js"></script>
+
+   <!-- Font Awesome Cdn Link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body width = "device-width">
+<div class="wrapper">
+    <h1>SIGN UP</h1>
+
+    <form method="POST" name="submit-to-google-sheet">
+    <label>Username</label>
+      <input type="text" name="Username" placeholder="twitter.com/username" required><br>
+    <label>Gender</label>
+    <div class="select">
+        <select name="Gender" id="Gender">
+           <option selected disabled>Select</option>
+           <option value="male">Male</option>
+           <option value="female">Female</option>
+        </select>
+     </div><br>
+      <label>Your desired character</label>
+      <input type="text" name="Your desired character" placeholder="Ex: Yumeko from Kakegurui" required>
+        <label>Alternative character</label>   
+      <input type="text" name="Alternative character" placeholder="Max. 2" required>
+        <p>Please rate how active you are</p>   
+      <input type="text" name="Please rate how active you are" placeholder="1-5" required>
+    <div class="inputfield">
+        <label>If you placed first and manage to beat other players in gambling, what will you do to our school?</label><br><br>
+        <textarea class="textarea"name="If you placed first and manage to beat other players in gambling, what will you do to our school?" placeholder="Ex: Removing gambling from the curriculum, make students learn from home. You can answer it in serious or funny." required></textarea>
+    
+        <button id="submit" type="submit" name="submit">REGISTER</button></input>
+    </div>
+    </form>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxJiLc97WGAnHGeg8sFyS2h4C6V1QiQiwhvuRbzWnlMY2T9rRwT4aY-a2ONIXrnvbJN/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert('Your data have submitted! Waiting for the announcement, goodluck! Mr.X'))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+      <script>
+        const textarea = document.querySelector("textarea");
+        textarea.addEventListener("keyup", e =>{
+          textarea.style.height = "63px";
+          let scHeight = e.target.scrollHeight;
+          textarea.style.height = `${scHeight}px`;
+        });
+      </script>
+</div>
+</body>
+</html>

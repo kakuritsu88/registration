@@ -12,13 +12,14 @@ height: -webkit-fill-available-
 }
 
 body {
-        background-color: #8ebc42;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-}
-
-  
+    display: absolute;
+    align-items: left;
+    min-height: 100vh;
+    margin: 0 auto;
+    background:url(Gambar/invite.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
 }
 
 .wrapper{
